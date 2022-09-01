@@ -97,8 +97,44 @@ header {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 20px 30px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
+
+/* 
+Register Information
+ */
+
+ .register-babysitter-container {
+    width: 100%;
+    border: 2px solid red;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+ }
+
+ .register-babysitter-logo-container {
+    width: 40%;
+    border: 2px solid red;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .register-babysitter-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 2px solid red;
+    height: 90%;
+ 
+  
+   
+ }
+
+
+
 
 @media (max-width: 850px) {
     header {
@@ -106,16 +142,35 @@ header {
     }
     .front-page-container {
         flex-direction: column;
+        gap: 2rem;
     }
 
     .front-page-logo-container {
         width: 100%;
-        height: 70%;
+        height: 80%;
+        
     }
 
     .front-page-option-container {
         width: 100%;
-        height: 30%;
+        height: auto;
+    }
+
+    .register-babysitter-container {
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-around;
+        
+    }
+
+    .register-babysitter-logo-container {
+        width: 100%;
+        height: 25%;
+    }
+
+    .register-babysitter-info-container {
+        width: 100%;
+        height: 70%;
     }
 
 
