@@ -28,6 +28,7 @@ li {
 
 a {
     text-decoration: none;
+    color: var(--primary-color);
 }
 
 
@@ -39,6 +40,7 @@ header {
 .header-logo-container {
     width: 20%;
     text-align: center;
+    letter-spacing: 4px;
 }
 
 .header-category-container {
@@ -53,26 +55,49 @@ header {
     justify-content: space-evenly;
     width: 100%;
     align-items: center;
+  
+    height: 100%;
     
 }
+
+
 
 .front-page-container {
    
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
+ 
+    /* background: url('./img/cover-aruga.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+   
+    
+}
+
+.front-page-wrapper {
+    width: 100%;
+    height: 92vh;
+    display: flex;
     align-items: center;
+    justify-content: space-around;
+    font-family: var(--primary-font);
+   
+   
 }
 
 .front-page-logo-container {
   
-    width: 40%;
-    height: 80%;
+    width: 50%;
+    height: 90%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    letter-spacing: 4px;
 }
+
+
+
 
 .front-page-option-container {
 
@@ -84,19 +109,22 @@ header {
 
 .front-page-button-container {
 
-    width: 80%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    
 }
 
 .front-page-button-container button {
     border: none;
     font-family: var(--primary-font);
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 20px 30px;
+    border: 2px solid var(--primary-color);
+
+    background-color: white;
+    color: var(--primary-color);
+    padding: 15px 20px;
     border-radius: 5px;
 }
 
@@ -128,21 +156,172 @@ Register Information
     width: 50%;
     border: 2px solid red;
     height: 90%;
- 
-  
-   
+    
+ }
+
+ .register-babysitter-info-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: var(--primary-font);
  }
 
 
+ .register-babysitter-info-container input {
+    width: 250px;
+    height: 30px;
+    padding: 10px 16px;
+    border: 1px solid var(--primary-color);
+    margin-top: 2px;
+ }
+
+.otp-container {
+    display: none;
+}
+
+/* 
+Dashboard
+ */
+
+.dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+   
+}
+
+
+
+
+.dashboard-search-container {
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+   
+
+}
+
+.dashboard-search-wrapper {
+    display: flex;
+    height: 50px;
+    width: 40%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dashboard-search-wrapper input {
+    width: 80%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.dashboard-search-wrapper button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.search-icon {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.dashboard-jobpost-container {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.dashboard-jobpost-wrapper {
+ 
+    width: 70%;
+    display: flex;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    gap: 3rem;
+   
+   
+   
+}
+
+.dashboard-card-container {
+    display: flex;
+    gap: 20 px;
+    flex-direction: column;
+    width: 45%;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 5px;
+   
+}
+
+.job-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.dashboard-card-container  h1{
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.dashboard-card-container p {
+    font-size: 12px;
+}
+
+
+.job-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: 'Roboto', sans-serif;
+    color: #2d2d2d;
+    border-bottom   : 1px solid #f0f0f0;
+}
+
+
+
+
+.job-body {
+    width: 100%;
+    border: 2px solid red;
+}
+
+.job-info li {
+    list-style-type: disc;
+}
+
+.dashboard-card-container button{
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    color: white;
+    margin-top: 10px;
+    background-color: black;
+}
+
+.dashboard-card-container {
+    display: none;
+}
 
 
 @media (max-width: 850px) {
     header {
         display: none;
     }
-    .front-page-container {
+    .front-page-wrapper {
         flex-direction: column;
         gap: 2rem;
+        height: 100vh;
+
+        border: 2px solid red;
     }
 
     .front-page-logo-container {
@@ -155,6 +334,16 @@ Register Information
         width: 100%;
         height: auto;
     }
+
+    .front-page-button-container {
+
+        width: 80%;
+        margin-bottom: 20px;
+
+    }
+
+    
+
 
     .register-babysitter-container {
         flex-direction: column;
@@ -174,4 +363,17 @@ Register Information
     }
 
 
+
+    .dashboard-search-wrapper {
+        width: 90%;
+    }
+
+    .dashboard-wrapper input {
+        width: 70%;
+     
+    }
+
+    .dashboard-card-container {
+        width: 100%;
+    }
 }
