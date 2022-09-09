@@ -52,7 +52,7 @@ const DashBoard = () => {
     }
     return (
         <div>
-            <Header email={ReactSession.get("email")}/>
+            <Header second={"Post Job"}email={ReactSession.get("email")} logout={"Logout"}/>
             <div className="dashboard-container">
                     <div className='dashboard-wrapper'> 
                     <div className='dashboard-search-container'>

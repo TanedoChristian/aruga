@@ -11,10 +11,11 @@ const Header = (props) => {
                 </div>
                 <div className='header-category-container'>
                     <ul>
-                        <li><a href=''>Home </a></li>
-                        <li><a href=''>About Us </a></li>
-                        <li><a href=''>Contact Us  </a></li>
+                        <li><a href=''>{props.home} </a></li>
+                        <li><a href=''>{props.contact} </a></li>
+                        <li><a href='/postjob'>{props.second}  </a></li>
                         <li><a href=''> {props.email} </a></li>
+                        <li><a href='/logout'>{props.logout}</a></li>
                     </ul>
                 </div>
             </header>

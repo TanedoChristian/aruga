@@ -6,6 +6,10 @@ const FrontPage = () => {
         window.location.href = "http://192.168.1.50:3000/register"
     }
 
+    const movetoSignIn = () =>{
+        window.location.href ="http://192.168.1.50:3000/signin"
+    }
+
     return (
         <div>
             <div className="front-page-container">
@@ -16,7 +20,7 @@ const FrontPage = () => {
                 </div>
                 <div className="front-page-option-container">
                     <div className="front-page-button-container"> 
-                        <button> Sign In </button>
+                        <button onClick={movetoSignIn}> Sign In </button>
                         <button onClick={moveToRegister}> Sign Up </button>
                     </div>
                 </div>

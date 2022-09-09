@@ -60,10 +60,7 @@ const RegisterBabySitter = () => {
         .then((res)=>{
             console.log(res.data.auth);
             if(res.data.auth == true){
-                ReactSession.set("email", email);
-                console.log(ReactSession.get("email"));
-                window.location.href = "http://192.168.1.50:3000/dashboard"
-                
+                window.location.href = "http://192.168.1.50:3000/signin"      
             } 
         })
         
@@ -82,6 +79,7 @@ const RegisterBabySitter = () => {
     const testData = () => {
 
         $.post("http://192.168.1.50:80/aruga/verify-account", { number: number} );
+        console.log(number)
 
         $(".form").hide();
         $(".otp-container").show();
